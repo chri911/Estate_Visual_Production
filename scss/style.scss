@@ -19,6 +19,7 @@ a{
     display: inline-block;
     text-decoration: none;
     color: #000;
+    transition: all .3s;
 }
 ul, li{
     padding: 0;
@@ -28,6 +29,7 @@ ul, li{
 .container{
     max-width: 1570px;
     margin: 0 auto;
+    padding: 0 15px;
     // position: relative;
 }
 body{
@@ -44,22 +46,26 @@ body{
     background-color: transparent;
      height: 80px;
      align-items: center;
-     padding: 0 30px;
+    //  padding: 0 30px;
      top: 0;
      width: 100%;
     // z-index: 200;
+    transition: all .5s;
 }
 .headhesive{
     background: transparent;
     position: fixed;
     width: 100%;
     transform: translateY(-100%);
-    transition: 0.5s;
+    transition: all .5s;
+    left: 0;
+    right:0;
 }
 .headhesive--stick{
     transform: translateY(0);
     background-color: #fff;
     z-index: 100;
+    transition: all 3s;
     .menu__list-item a {
         color: #000;
     }
@@ -170,6 +176,7 @@ h1{
     flex-direction: column;
     padding-left: 70px;
     margin-top: 20px;
+    flex-basis: calc(33.3333% - 30px); 
     & img{
         background-position: center;
         background-repeat: no-repeat;
@@ -182,18 +189,19 @@ h1{
     text-align: center;
 }
 .about{
-    margin: 40px 40px;
+    padding: 40px 40px;
     line-height: 1.5;
     font-size: 20px;
     & p{
         margin-top: 20px;   
     }
     & li{
-     position: relative;   
+     position: relative;
+     padding-left: 20px;   
     &::before{
 content: '';
 position: absolute;
-left: -10px;
+left: 5px;
 background-color: #ff2e64;
 width: 4px;
 height: 4px;
@@ -204,7 +212,7 @@ top: 14px;
 .contact__info{
     display: flex;
     justify-content: left;
-    margin: 40px 30px;
+    padding: 40px 30px;
 }
 .contact__info-title{
     font-size: 30px;
