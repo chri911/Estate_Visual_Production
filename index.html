@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
- <section class="fullscreen container">
+ <section class="fullscreen">
  <div class="header"> 
     <div class="header-top container">
             <div class="logo">
@@ -35,10 +35,27 @@
     <div class="header-bottom">
 
     </div>
+    <ul class="social-icons">
+        <li>
+    <a href="#" class="icon-rupor" onclick="video = document.getElementById('presentation'); video.muted ? video.muted = false : video.muted = true;">
+        <svg height="50px" version="1.1" viewBox="0 0 60 60" width="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><g id="015---Mute" stroke="#000000" stroke-width="2" transform="translate(1.000000, 1.000000)"><ellipse cx="29" cy="29" id="Oval" rx="29" ry="28.875"/><ellipse cx="29" cy="29" id="Oval" rx="25" ry="24.875"/><path d="M16,25 L20,25 L20,33 L16,33 C14.8954305,33 14,32.1045695 14,31 L14,27 C14,25.8954305 14.8954305,25 16,25 Z" id="Shape"/><path d="M20,29 L20,25 L29.78058,17.47648 C30.3845113,17.0119184 31.1999413,16.9308669 31.8835048,17.2674551 C32.5670682,17.6040434 33.0000003,18.2997913 33,19.06173 L33,29" id="Shape"/><path d="M33,29 L33,38.93827 C33.0000003,39.7002087 32.5670682,40.3959566 31.8835048,40.7325449 C31.1999413,41.0691331 30.3845113,40.9880816 29.78058,40.52352 L20,33 L20,29" id="Shape"/><path d="M37,27 L43,33" id="Shape"/><path d="M43,27 L37,33" id="Shape"/></g></g></svg>
+    </a>
+    </li>
+    <!-- <li>
+        <a href="#" class="icon-close">
+            <svg height="50px" version="1.1" viewBox="0 0 60 60" width="50px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title/><desc/><defs/><g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"><g id="015---Mute" stroke="#000000" stroke-width="2" transform="translate(1.000000, 1.000000)"><ellipse cx="29" cy="29" id="Oval" rx="29" ry="28.875"/><ellipse cx="29" cy="29" id="Oval" rx="25" ry="24.875"/><path d="M16,25 L20,25 L20,33 L16,33 C14.8954305,33 14,32.1045695 14,31 L14,27 C14,25.8954305 14.8954305,25 16,25 Z" id="Shape"/><path d="M20,29 L20,25 L29.78058,17.47648 C30.3845113,17.0119184 31.1999413,16.9308669 31.8835048,17.2674551 C32.5670682,17.6040434 33.0000003,18.2997913 33,19.06173 L33,29" id="Shape"/><path d="M33,29 L33,38.93827 C33.0000003,39.7002087 32.5670682,40.3959566 31.8835048,40.7325449 C31.1999413,41.0691331 30.3845113,40.9880816 29.78058,40.52352 L20,33 L20,29" id="Shape"/><path d="M37,27 L43,33" id="Shape"/><path d="M43,27 L37,33" id="Shape"/></g></g></svg>
+
+        </a>
+    </li> -->
+    </ul>
 </div>
-<div class="video">  
+<!-- <div class="video">  
     <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/414740449?autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-</div>
+</div> -->
+<video id="presentation" controls="controls" loop="" muted="" autoplay="" class="video">
+    <source src="images/promo.mp4" type="video/mp4">
+    <source src="images/promo.webm" type="video/webm">
+</video>
     </section> 
     <h1 id="portfolio">Видеосъемка недвижимости</h1>
     <section class="portfolio container">

@@ -6,7 +6,13 @@ $(function(){
       }
     var header = new Headhesive('.header-top', options);
     
-  
+    // $('video').click(function(){
+    //   if (this.paused) {
+    //     this.play()
+    //   } else {
+    //     this.pause()
+    //   }
+    // })
       
   
   

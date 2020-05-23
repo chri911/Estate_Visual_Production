@@ -65,7 +65,7 @@ body{
     transform: translateY(0);
     background-color: #fff;
     z-index: 100;
-    transition: all 3s;
+    transition: all .3s;
     .menu__list-item a {
         color: #000;
     }
@@ -112,9 +112,48 @@ body{
     color: #fff;
     font-weight: 600;
     text-transform: uppercase;
-    transition: all 5s;
+    transition: all .3s;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+    &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 2px);
+        left: -100%;
+        width: 100%;
+        height: 4px;
+        background: #ff2e64;
+        transition: 0.5s;
+      }
+      &:hover {
+        color: #fff;
+        &::before {
+            animation: animate .5s linear forwards; 
+          }
+      }
 }
+@keyframes animate {
+    0% {
+      top: calc(50% - 2px);
+      left: -100%;
+      height: 4px;
+      z-index: 1;
+    }
+    50% {
+      top: calc(50% - 2px);
+      left: 0;
+      height: 4px;
+      z-index: 1;
+    }
+    100% {
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: -1;
+    }
+  }
 .fullscreen{
     overflow: hidden;
     // z-index: -100;
@@ -131,7 +170,7 @@ body{
      width: 100%;
  }
  .header {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.4);
     position: absolute;
     top:0;
     left:0;
@@ -139,6 +178,29 @@ body{
     height: 100%;
     z-index: 100;
  }
+.social-icons {
+    position: absolute;
+    bottom: 2%;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    & li{
+        display: inline-block;
+    }
+}
+ .social-icons a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    opacity: .6;
+    transition: .3s;
+}
+.icon-rupor svg{
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.3;
+}
 h1{
     font-size: 45px;
     text-align: center;
@@ -183,6 +245,9 @@ h1{
         background-size: cover;
         width: 130px;
         padding-bottom: 15px;
+    }
+    &::hover{
+        background-color: yellow;
     }
 }
 .service-text{
@@ -297,7 +362,7 @@ button{
 }
 .footer{
     background: #060d2a;
-    background-image: linear-gradient(155deg,#010206 0,#060d2a 50%,#3a0324 100%);
+    background-image: linear-gradient(155deg,#000000 0,#03081d 50%,#5f5d5f 100%);
     display: flex;
         justify-content: space-between;
         color: #fff;
