@@ -6,14 +6,17 @@ $(function(){
       }
     var header = new Headhesive('.header-top', options);
     
-    // $('video').click(function(){
-    //   if (this.paused) {
-    //     this.play()
-    //   } else {
-    //     this.pause()
-    //   }
-    // })
-      
+  
+    vid = document.getElementById('v0'); 
+ 
+    vid.addEventListener('mouseenter', function() {
+      vid.play();
+    });
+    
+    vid.addEventListener('mouseleave', function() {
+      vid.pause();
+    });
+    
   
   
   

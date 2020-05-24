@@ -15,6 +15,11 @@ body {
     height: 100%;
     
 }
+@font-face{
+    font-family: "Helvetica-Bold";
+    src: url('../fonts/HelveticaBold.woff2') format("woff"),
+         url('../fonts/HelveticaBold.woff') format("woff");
+}
 a{
     display: inline-block;
     text-decoration: none;
@@ -51,6 +56,7 @@ body{
      width: 100%;
     // z-index: 200;
     transition: all .5s;
+    padding: 10px 40px;
 }
 .headhesive{
     background: transparent;
@@ -60,12 +66,15 @@ body{
     transition: all .5s;
     left: 0;
     right:0;
+    padding: 10px 40px;
 }
 .headhesive--stick{
     transform: translateY(0);
     background-color: #fff;
     z-index: 100;
     transition: all .3s;
+    padding: 10px 40px;
+    box-shadow: 2px 12px 32px rgba(6,13,42,.06);
     .menu__list-item a {
         color: #000;
     }
@@ -82,12 +91,17 @@ body{
         color: #fff;
         font-weight: 600;
         font-size: 26px;
-        width: 255px;
+        width: 300px;
         justify-content: space-between;
         margin: 10px;
         &-text{
             margin-left: 20px;
+            font-family: "Helvetica-Bold";
+            font-style: italic;
             position: relative;
+            & span{
+                text-transform: uppercase;
+            }
             &::before{
                 content: '';
                 position: absolute;
@@ -170,7 +184,7 @@ body{
      width: 100%;
  }
  .header {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,-0.4);
     position: absolute;
     top:0;
     left:0;
@@ -223,6 +237,8 @@ h1{
     justify-content: center;
     &__item{
         width: 30%;
+        flex-basis: calc(33.3333% - 30px);
+        margin: 10px;
     }
 }
 .services{
@@ -276,34 +292,15 @@ top: 14px;
 }
 .contact__info{
     display: flex;
-    justify-content: left;
-    padding: 40px 30px;
-}
-.contact__info-title{
-    font-size: 30px;
-    font-weight: 500;
-    position: relative;
-    padding: 40px 10px 30px;
-    &::before{
-        content: '';
-        background-color: red;
-        width: 100px;
-        height: 2px;
-        position: absolute;
-        left: 175px;
-        top: 60px;
-    }
+    justify-content: center;
+    padding: 10px 30px 60px;
 }
 .contact__info-item{
-    padding: 5px 20px 30px;
-    &.office{
-        margin-right: 70px;
-        background: #f7f8f9;
-        max-width: 340px;
-        width: 100%;
-    }
+    padding: 40px 45px 30px;
     &.contact{
         width: 100%;
+        background: #f7f8f9;
+        max-width: 700px;
     }
 }
 .contact__info-address,
@@ -322,8 +319,10 @@ top: 14px;
 .contact__info-links{
     margin: 40px 5px 30px;
     display: flex;
-    color: #181937;
     justify-content: center;
+    & svg{
+        fill: #fff;
+    }
     & div + div{
         padding-left: 30px;
     }
@@ -367,10 +366,11 @@ button{
         justify-content: space-between;
         color: #fff;
         align-items: center;
+        padding: 40px;
     &__inner, .footer__copy{
-        padding: 30px 30px;
+        padding: 10px 30px;
         &-phone a{
-            font-size: 24px;
+            font-size: 20px;
             color: #fff;
             padding: 20px 0;
         }
