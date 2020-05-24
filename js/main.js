@@ -7,16 +7,16 @@ $(function(){
     var header = new Headhesive('.header-top', options);
     
   
-    vid = document.getElementById('v0'); 
- 
-    vid.addEventListener('mouseenter', function() {
-      vid.play();
+    let videos = document.getElementsByClassName("portfolio__item");
+for (let video of videos) {
+    video.addEventListener('mouseenter', function() {
+        video.play();
     });
-    
-    vid.addEventListener('mouseleave', function() {
-      vid.pause();
+    video.addEventListener('mouseleave', function() {
+        video.pause();
     });
-    
+}
+
   
   
   
