@@ -138,7 +138,7 @@ body{
         left: -100%;
         width: 100%;
         height: 4px;
-        background: #ff2e64;
+        background: #140308;
         transition: 0.5s;
       }
       &:hover {
@@ -147,6 +147,17 @@ body{
             animation: animate .5s linear forwards; 
           }
       }
+}
+.menu ul li a.active{
+    font-weight: 700;
+    &::after{
+      content: '';
+      bottom: -5px;
+      height: 2px;
+      width: 100%;
+      display: block;
+      border-top: 1px solid #ff2e64; 
+    };
 }
 @keyframes animate {
     0% {
@@ -222,6 +233,7 @@ h1{
     letter-spacing: 5px;
     margin-top: 100px;
     margin-bottom: 60px;
+    
     &::after{
         content: "";
     display: block;
@@ -231,10 +243,27 @@ h1{
     margin: 20px auto;
     }
 }
+.title-box{
+    position: relative;
+    margin-top: 60px;
+}
+.back-title{
+    color: #F4F4F4;
+    font-weight: bold;
+    font-size: 85px;
+    top: -45px;
+    letter-spacing: 8px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: -1;
+    width: 100%;
+}
 .portfolio{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 60px;
     &__item{
         width: 30%;
         flex-basis: calc(33.3333% - 30px);
