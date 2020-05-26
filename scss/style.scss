@@ -19,7 +19,25 @@ body {
     font-family: "Helvetica-Bold";
     src: url('../fonts/HelveticaBold.woff2') format("woff"),
          url('../fonts/HelveticaBold.woff') format("woff");
+    font-display: swap;
 }
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {
+    animation-name: fadeInDown;
+    animation-duration: 3s;
+    animation-delay: 1s;
+  }
 a{
     display: inline-block;
     text-decoration: none;
@@ -283,7 +301,12 @@ h1{
     flex-direction: column;
     padding-left: 70px;
     margin-top: 20px;
-    flex-basis: calc(33.3333% - 30px); 
+    flex-basis: calc(33.3333% - 30px);
+    &:hover{
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+    } 
     & img{
         background-position: center;
         background-repeat: no-repeat;
@@ -387,6 +410,12 @@ button{
     border: 1px solid #ff2e64;
     transition: .25s ease-in-out;
     transition-property: color,background-color,background-position,border-color,box-shadow;
+    &:hover{
+        background-color: transparent;
+    color: #fff;
+    border-color: #ff2e64;
+    background-image: linear-gradient(90deg,#ff2e64 50%,transparent 50%);
+    }
 }
 .footer{
     background: #060d2a;
