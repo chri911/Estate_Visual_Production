@@ -42,7 +42,7 @@ a{
     display: inline-block;
     text-decoration: none;
     color: #000;
-    transition: all .3s;
+    // transition: all .3s;
 }
 ul, li{
     padding: 0;
@@ -67,40 +67,77 @@ body{
      display: flex;
      justify-content: space-between;
     background-color: transparent;
-     height: 80px;
+     height: 85px;
      align-items: center;
-    //  padding: 0 30px;
      top: 0;
      width: 100%;
-    // z-index: 200;
-    transition: all .5s;
-    padding: 10px 40px;
+    // transition: all .5s;
+    padding: 0 40px;
+    z-index: 101;
 }
 .headhesive{
     background: transparent;
     position: fixed;
     width: 100%;
     transform: translateY(-100%);
-    transition: all .5s;
+    // transition: all .5s;
     left: 0;
     right:0;
-    padding: 10px 40px;
+    padding: 0 40px;
 }
 .headhesive--stick{
     transform: translateY(0);
     background-color: #fff;
-    z-index: 100;
-    transition: all .3s;
-    padding: 10px 40px;
+    z-index: 101;
+    // transition: all .3s;
+    padding: 0 40px;
     box-shadow: 2px 12px 32px rgba(6,13,42,.06);
-    .menu__list-item a {
-        color: #000;
+    .menu__list-link {
+        background: linear-gradient(to right, #ff2e64, #ff2e64 50%, #000 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        text-decoration: none;
+        &::after{
+          content: '';
+          position: absolute;
+          left: 2px;
+          height: 4px;
+          width: 100%;
+          bottom: -4px;
+          overflow: hidden;
+          background: linear-gradient(to right, #ff2e64, #ff2e64 50%, #000 50%);
+          background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        display: none;
+        }
+          &:hover {
+              background-position: 0 100%;
+              &::after{
+                  display: block;
+                  background-position: 0 100%;
+                  transition: background-position 275ms ease;
+                  }
+            }
     }
     .logo__link{
         color: #000;
         &-text::before{
             background-color: #000;
         }
+        &-img{
+            display: none;
+        &-stick{
+            display: block;
+        }
+    }
+    }
+    .phone a{
+        color: #000;
     }
 }
 .logo__link{
@@ -112,6 +149,9 @@ body{
         width: 300px;
         justify-content: space-between;
         margin: 10px;
+        &-img-stick{
+            display: none;
+        }
         &-text{
             margin-left: 20px;
             font-family: "Helvetica-Bold";
@@ -130,42 +170,53 @@ body{
             }
         }
     }
-.logo__link-img{
-    width: 70px;
-    
-}
+
 .menu__list{
     display: flex;
-& li + li {
+   & li + li {
     padding-left: 50px;
 }
 }
-.menu__list-item a{
-    color: #fff;
+.menu__list-link{
     font-weight: 600;
     text-transform: uppercase;
-    transition: all .3s;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     padding: 5px;
-    &::before {
-        content: '';
-        position: absolute;
-        top: calc(50% - 2px);
-        left: -100%;
-        width: 100%;
-        height: 4px;
-        background: #140308;
-        transition: 0.5s;
+  background: linear-gradient(to right, #ff2e64, #ff2e64 50%, #fff 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  text-decoration: none;
+  &::after{
+    content: '';
+    position: absolute;
+    left: 2px;
+    height: 4px;
+    width: 100%;
+    bottom: -3px;
+    overflow: hidden;
+    background: linear-gradient(to right, #ff2e64, #ff2e64 50%, #fff 50%);
+    background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+  display: none;
+  }
+    &:hover {
+        background-position: 0 100%;
+        &::after{
+            display: block;
+            background-position: 0 100%;
+            }
       }
-      &:hover {
-        color: #fff;
-        &::before {
-            animation: animate .5s linear forwards; 
-          }
-      }
-}
+
+    }
+
+
 .menu ul li a.active{
     font-weight: 700;
     &::after{
@@ -204,6 +255,8 @@ body{
     height: 100%;
     width: 100%;
     padding-top:45%;
+    margin-bottom: 150px;
+    
 }
  
  .video {
@@ -220,6 +273,7 @@ body{
     width: 100%;
     height: 100%;
     z-index: 100;
+    background-image: url(../images/bc_.png);
  }
 .social-icons {
     position: absolute;
@@ -233,16 +287,23 @@ body{
 }
  .social-icons a {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 56px;
+    height: 56px;
     background-size: cover;
     opacity: .6;
     transition: .3s;
 }
-.icon-rupor svg{
-    background-color: #fff;
+.icon-mute{
     border-radius: 50%;
-    opacity: 0.3;
+    background-repeat: no-repeat;
+    width: 56px;
+    height: 56px;
+    // opacity: 0.3;
+}
+.phone a{
+    font-family: 'Helvetica-Bold';
+    letter-spacing: 2px;
+    color: #fff;
 }
 h1{
     font-size: 45px;
@@ -251,7 +312,6 @@ h1{
     letter-spacing: 5px;
     margin-top: 100px;
     margin-bottom: 60px;
-    
     &::after{
         content: "";
     display: block;
@@ -277,6 +337,7 @@ h1{
     z-index: -1;
     width: 100%;
 }
+
 .portfolio{
     display: flex;
     flex-wrap: wrap;
@@ -374,6 +435,9 @@ top: 14px;
     justify-content: center;
     & svg{
         fill: #fff;
+        &:hover{
+            fill: #ff2e64;
+        }
     }
     & div + div{
         padding-left: 30px;
@@ -418,14 +482,18 @@ button{
     }
 }
 .footer{
-    background: #060d2a;
-    background-image: linear-gradient(155deg,#000000 0,#03081d 50%,#5f5d5f 100%);
+    
+    background-image: url(../images/footer.jpg);
+    background-size: cover;
     display: flex;
         justify-content: space-between;
         color: #fff;
         align-items: center;
         padding: 40px;
     &__inner, .footer__copy{
+        & a:hover{
+            color: #ff2e64;
+        }
         padding: 10px 30px;
         &-phone a{
             font-size: 20px;

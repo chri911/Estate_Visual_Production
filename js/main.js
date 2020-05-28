@@ -29,5 +29,17 @@ $(".menu__list").on("click","a", function (event) {
         $(this).addClass('active');
       })
   
+    //   $(document).ready(function() {
+    //     $(".icon-rupor").click(function() {
+    //       $(".icon-rupor").toggleAttribute("background-image[url='../images/loud.png']");
+          
+    //     });
+    //   });  
+      $(".icon-mute").click(function(){
+        var src = $(this).attr('src');
+        var newsrc = (src=='../images/mute.png') ? '../images/loud.png' : '../images/mute.png';
+        $(this).attr('src', newsrc );
+        });      
+      
   
   });
