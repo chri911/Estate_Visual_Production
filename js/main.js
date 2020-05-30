@@ -28,29 +28,16 @@ $( document ).ready(function() {
 		$(this).addClass('active');
 	})
 
-$(".menu__list").on("click","a", function (event) {
-          event.preventDefault();
-          var id  = $(this).attr('href'),
-              top = $(id).offset().top;
-          $('body,html').animate({scrollTop: top-150}, 1500);
-      });
-  
-      $(".menu ul li a").click(function(e) {
-        $(".menu ul li a").removeClass('active');
-        $(this).addClass('active');
-      })
-  
-$(".icon-mute").click(function(){
-        var src = $(this).attr('src');
-        var newsrc = (src=='../images/mute.png') ? '../images/loud.png' : '../images/mute.png';
-        $(this).attr('src', newsrc );
-        });      
-
-new WOW().init();
+    $(".icon-mute").click(function () {
+		var src = $(this).attr('src');
+		var newsrc = (src == '../images/mute.png') ? '../images/loud.png' : '../images/mute.png';
+		$(this).attr('src', newsrc);
+	});
+    new WOW().init();
 
 
-  $("form").submit(function(){
-  $.fancybox.open({
+    $("form").submit(function(){
+     $.fancybox.open({
     src  : '#modal',
     type : 'inline',
     opts : {
@@ -58,15 +45,8 @@ new WOW().init();
         console.info('done!');
       }
     }
-    
+  });
   });
 
-
-  });
-});
-	$(".icon-mute").click(function () {
-		var src = $(this).attr('src');
-		var newsrc = (src == '../images/mute.png') ? '../images/loud.png' : '../images/mute.png';
-		$(this).attr('src', newsrc);
-	});
+	
 });
