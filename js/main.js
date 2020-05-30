@@ -34,6 +34,22 @@ $(".icon-mute").click(function(){
         var newsrc = (src=='../images/mute.png') ? '../images/loud.png' : '../images/mute.png';
         $(this).attr('src', newsrc );
         });      
-      
-  
+
+new WOW().init();
+
+
+  $("form").submit(function(){
+  $.fancybox.open({
+    src  : '#modal',
+    type : 'inline',
+    opts : {
+      onComplete : function() {
+        console.info('done!');
+      }
+    }
+    
   });
+
+
+  });
+});

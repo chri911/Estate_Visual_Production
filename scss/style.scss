@@ -60,7 +60,6 @@ a{
     display: inline-block;
     text-decoration: none;
     color: #000;
-    // transition: all .3s;
 }
 ul, li{
     padding: 0;
@@ -71,7 +70,6 @@ ul, li{
     max-width: 1570px;
     margin: 0 auto;
     padding: 0 15px;
-    // position: relative;
 }
 body{
     font-family: 'OpenSans', sans-serif;
@@ -84,21 +82,19 @@ body{
 .header-top{
      display: flex;
      justify-content: space-between;
-    background-color: transparent;
+     background-color: transparent;
      height: 85px;
      align-items: center;
      top: 0;
      width: 100%;
-    // transition: all .5s;
-    padding: 0 40px;
-    z-index: 101;
+     padding: 0 40px;
+     z-index: 101;
 }
 .headhesive{
     background: transparent;
     position: fixed;
     width: 100%;
     transform: translateY(-100%);
-    // transition: all .5s;
     left: 0;
     right:0;
     padding: 0 40px;
@@ -107,11 +103,10 @@ body{
     transform: translateY(0);
     background-color: #fff;
     z-index: 101;
-    // transition: all .3s;
     padding: 0 40px;
     box-shadow: 2px 12px 32px rgba(6,13,42,.06);
     .menu__list-link {
-        background: linear-gradient(to right, #ff2e64, #ff2e64 50%, #000 50%);
+        background: linear-gradient(to right, #b1abac, #b1abac 50%, #000 50%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -127,7 +122,7 @@ body{
           width: 100%;
           bottom: -4px;
           overflow: hidden;
-          background: linear-gradient(to right, #ff2e64, #ff2e64 50%, #000 50%);
+          background: linear-gradient(to right, #524e4f, #524e4f 50%, #000 50%);
           background-size: 200% 100%;
         background-position: 100%;
         transition: background-position 275ms ease;
@@ -199,7 +194,7 @@ body{
     position: relative;
     overflow: hidden;
     padding: 5px;
-  background: linear-gradient(to right, #ff2e64, #ff2e64 50%, #fff 50%);
+  background: linear-gradient(to right, #000, #000 50%, #fff 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -215,7 +210,7 @@ body{
     width: 100%;
     bottom: -3px;
     overflow: hidden;
-    background: linear-gradient(to right, #ff2e64, #ff2e64 50%, #fff 50%);
+    background: linear-gradient(to right, #000, #000 50%, #fff 50%);
     background-size: 200% 100%;
   background-position: 100%;
   transition: background-position 275ms ease;
@@ -441,7 +436,7 @@ top: 14px;
     & svg{
         fill: #fff;
         &:hover{
-            fill: #ff2e64;
+            fill: #524e4f;
         }
     }
     & div + div{
@@ -477,7 +472,7 @@ button{
     background-color: transparent;
     color: #ff2e64;
     border: 1px solid #ff2e64;
-    background: linear-gradient(to right, #ff2e64, #ff2e64 50%, #fff 50%);
+    background: linear-gradient(to right, #000, #000 50%, #fff 50%);
     background-size: 200% 100%;
   background-position: 100%;
   transition: background-position 275ms ease;
@@ -491,7 +486,7 @@ button{
 .footer{
     
     background-image: url(../images/footer.jpg);
-    background-size: cover;
+    background-size: content;
     display: flex;
         justify-content: space-between;
         color: #fff;
@@ -499,7 +494,7 @@ button{
         padding: 40px;
     &__inner, .footer__copy{
         & a:hover{
-            color: #ff2e64;
+            color: #524e4f;
         }
         padding: 10px 5px;
         &-phone a{
@@ -522,4 +517,14 @@ font-family: "Helvetica-Bold";
     font-weight: 800;
     opacity: 1;
 }
+}
+#modal{
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 20px;
+    text-align: center;
+    background-image: url(../images/footer.jpg);
+    background-size: cover;
+    color: #fff;
+    display: none;
 }
