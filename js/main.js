@@ -3,6 +3,7 @@ $( document ).ready(function() {
 		offset: 100
 	}
 	var header = new Headhesive('.header-top', options);
+
 	let videos = document.getElementsByClassName("portfolio__item");
 
 	for (let video of videos) {
@@ -48,5 +49,21 @@ $( document ).ready(function() {
   });
   });
 
+  $('.menu__btn').on('click', function(){
+	$('.menu__list').slideToggle();
+  });
 	
+
+$(document).ready(function() { 
+	var windowWidth = $(window).width();
+	if(windowWidth < 980) {header.destroy();}
+	
+	$(window).resize(function(){
+		var windowWidth = $(window).width();
+		if(windowWidth < 980) {header.destroy();}
+	});
+});
+
+
+
 });

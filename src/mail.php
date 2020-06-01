@@ -23,15 +23,15 @@ if (isset($_POST['action']) && $_POST['action'] == 'send_feedback') {
         require 'lib/PHPMailer/src/Exception.php';
         require 'lib/PHPMailer/src/SMTP.php';
 
-        $from = 'mail_from@mail.com';
-        $to = 'mail_to@mail.com';
+        $from = 'user@mail.com';
+        $to = 'user@mail.com';
 
         $mail = new PHPMailer();
         $mail->isSMTP();
         $mail->Host = 'smtp.mail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'mail_from@mail.com';
-        $mail->Password = 'password';
+        $mail->Username = 'user@mail.com';
+        $mail->Password = 'pass';
         $mail->SMTPSecure = 'ssl';
         $mail->Port = '465';
         $mail->CharSet = 'UTF-8';
