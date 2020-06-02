@@ -76,7 +76,9 @@
         background-color: #000;
         opacity: 0.4;
         &-link{
-          color: #000;  
+          color: #000;
+          padding: 10px;
+          font-size: 18px;  
         }
     & li {
         display: block;
@@ -285,6 +287,11 @@
         font-size: 26px;
         top: -7px;
     }
+    .service-item:hover{
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
+        } 
 }
 @media(max-width: 340px){
     .header {
