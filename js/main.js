@@ -31,7 +31,7 @@ $( document ).ready(function() {
 
     $(".icon-mute").click(function () {
 		var src = $(this).attr('src');
-		var newsrc = (src == '../images/mute.png') ? '../images/loud.png' : '../images/mute.png';
+		var newsrc = (src == 'images/mute.png') ? 'images/loud.png' : 'images/mute.png';
 		$(this).attr('src', newsrc);
 	});
     new WOW().init();
