@@ -71,6 +71,7 @@
     .menu__language{
         display: none;
     }
+    
     .menu__list{
         display: none;
         position: absolute;
@@ -80,7 +81,7 @@
         width: 100%;
         z-index: 5;
         background-color: #000;
-        opacity: 0.4;
+        opacity: 0.8;
         &-link{
           color: #000;
           padding: 10px;
