@@ -31,7 +31,7 @@ $( document ).ready(function() {
 
     $(".icon-mute").click(function () {
 		var src = $(this).attr('src');
-		var newsrc = (src == '../images/mute.png') ? '../images/loud.png' : '../images/mute.png';
+		var newsrc = (src == 'images/mute.png') ? 'images/loud.png' : 'images/mute.png';
 		$(this).attr('src', newsrc);
 	});
     new WOW().init();
@@ -49,10 +49,10 @@ $( document ).ready(function() {
   });
   });
 
-  $('.menu__btn').on('click', function(){
-	$('.menu__list').slideToggle();
+  $('.checkbox2').on('click', function(){
+	$('.menu__nav').slideToggle();
   });
-	
+  
 
 $(document).ready(function() { 
 	var windowWidth = $(window).width();
@@ -64,6 +64,26 @@ $(document).ready(function() {
 	});
 });
 
+$('.menu__language').click(function(){
+	$(this).toggleClass('open');
+	})
+	
+	$('.menu__language li').click(function(){
+	var setLang = $('.menu__language').data('location'),
+		dataLangSelect = $(this).data('lang')
+		  $('.menu__language').data('location', dataLangSelect);
+		  $('.menu__language li').removeClass('active');
+		  $(this).toggleClass('active');
+	})
+
+
+	$('.menu__language-inside li').click(function(){
+		var setLang = $('.menu__language').data('location'),
+			dataLangSelect = $(this).data('lang')
+			  $('.menu__language-inside').data('location', dataLangSelect);
+			  $('.menu__language-inside li').removeClass('active');
+			  $(this).toggleClass('active');
+		})
 
 
 });

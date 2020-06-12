@@ -89,6 +89,7 @@ body{
      width: 100%;
      padding: 0 40px;
      z-index: 101;
+    //  margin-top: 15px;
 }
 .headhesive{
     background: transparent;
@@ -105,7 +106,7 @@ body{
     z-index: 101;
     padding: 0 40px;
     box-shadow: 2px 12px 32px rgba(6,13,42,.06);
-    .menu__list-link {
+    .menu__list-link, .menu__language {
         background: linear-gradient(to right, #b1abac, #b1abac 50%, #000 50%);
         background-clip: text;
         -webkit-background-clip: text;
@@ -149,6 +150,12 @@ body{
         }
     }
     }
+    .menu__language{
+        display: none;
+    }
+}
+.logo, .menu, .menu__language{
+    margin-top: 15px;
 }
 .logo__link{
         display: flex;
@@ -180,13 +187,67 @@ body{
             }
         }
     }
-
 .menu__list{
     display: flex;
+    transition: all .1s;
    & li + li {
     padding-left: 50px;
 }
+
 }
+.checkbox2, .menu__language-inside{
+    display: none;
+}
+
+.menu__language{ 
+    display: inline-flex;
+    flex-direction: column;
+    transition: all .1s;
+    font-size: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    margin: 20px;
+    text-transform: uppercase;
+    height: 45px;
+    width: 45px;
+    margin-right: -15px;
+       & li{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 2;
+    padding: 5px;
+    min-height: 40px;
+       &:hover{
+        cursor: pointer;
+    }
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    background-image: url(../images/down-arrow.png);
+    right: 6px;
+    top: 15px;
+    display: block;
+    width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  }
+  &.open{
+      height: auto;
+      padding-top: 35px;
+  }
+  & li.active{
+    order: 1;
+    pointer-events: none;
+  }
+}
+
 .menu__list-link{
     font-weight: 600;
     text-transform: uppercase;
@@ -194,7 +255,7 @@ body{
     position: relative;
     overflow: hidden;
     padding: 5px;
-  background: linear-gradient(to right, #000, #000 50%, #fff 50%);
+  background: linear-gradient(to right, rgb(196, 191, 191), rgb(196, 191, 191) 50%, #fff 50%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -210,7 +271,7 @@ body{
     width: 100%;
     bottom: -3px;
     overflow: hidden;
-    background: linear-gradient(to right, #000, #000 50%, #fff 50%);
+    background: linear-gradient(to right, rgb(104, 102, 102), rgb(104, 102, 102) 50%, #fff 50%);
     background-size: 200% 100%;
   background-position: 100%;
   transition: background-position 275ms ease;
@@ -229,7 +290,7 @@ body{
 
 .menu ul li a.active{
     font-weight: 700;
-    border-bottom: 1px solid #ff2e64;
+    border-bottom: 1px solid #000;
 }
 @keyframes animate {
     0% {
@@ -252,14 +313,15 @@ body{
     }
   }
 .fullscreen{
-    overflow: hidden;
+    overflow: overlay;
     // z-index: -100;
     position: relative;
     // height: 100%;
     width: 100%;
-    padding-top:45%;
+    padding-top: 50%;
     margin-bottom: 150px;
     min-height: 200px;
+    background: #000;
 }
  
  .video {
@@ -267,21 +329,22 @@ body{
      top: 0;
      left: 0;
      width: 100%;
+     height: 100%;
  }
  .header {
-    background: rgba(0,0,0,-0.4);
     position: absolute;
     top:0;
     left:0;
     width: 100%;
     height: 100%;
-    z-index: 100;
-    background-image: url(../images/bc3.png);
+   z-index: 100;
+    background-image: url(../images/bcnew13.png);
     background-size: cover;
+    
  }
 .social-icons {
     position: absolute;
-    bottom: 2%;
+    bottom: 12%;
     width: 100%;
     text-align: center;
     z-index: 100;
@@ -316,7 +379,7 @@ h1{
     display: block;
     width: 90px;
     max-width: 100%;
-    border-top: 1px solid #ff2e64;
+    border-top: 1px solid #000;
     margin: 20px auto;
     }
 }
@@ -368,9 +431,9 @@ h1{
     margin-top: 20px;
     flex-basis: calc(33.3333% - 30px);
     &:hover{
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
     } 
     & img{
         background-position: center;
@@ -397,7 +460,7 @@ h1{
 content: '';
 position: absolute;
 left: 5px;
-background-color: #ff2e64;
+background-color: #000;
 width: 4px;
 height: 4px;
 top: 14px;
@@ -425,7 +488,7 @@ top: 14px;
         padding: 15px 5px;
     }
     & a{
-        color: #ff2e64;
+        color: #000;
     text-decoration: underline;
     cursor: pointer;
     }
@@ -471,8 +534,8 @@ button{
     line-height: 53px;
     font-size: 18px;
     background-color: transparent;
-    color: #ff2e64;
-    border: 1px solid #ff2e64;
+    color: #000;
+    border: 1px solid #000;
     background: linear-gradient(to right, #000, #000 50%, #fff 50%);
     background-size: 200% 100%;
   background-position: 100%;
@@ -480,13 +543,14 @@ button{
     &:hover{
         background-color: transparent;
     color: #fff;
-    border-color: #ff2e64;
+    border-color: #000;
     background-position: 0 100%;
     }
 }
 .footer{
     
-    background-image: url(../images/footer.jpg);
+    background-image: url(../images/bcnew10.png);
+    background-color: #000;
     background-size: content;
     display: flex;
         justify-content: space-between;
@@ -504,7 +568,6 @@ button{
             padding: 20px 0;
         }
         &-mail a{
-            font-family: "OpenSans-ExtraBold";
             font-size: 20px;
             color: #fff;
             text-decoration: underline;
@@ -512,11 +575,13 @@ button{
     }
 }
 .footer__copy{
+    color: #fff;   
 opacity: 0.45;
 font-family: "Helvetica-Bold";
 & span{
     font-weight: 800;
     opacity: 1;
+    font-style: italic;
 }
 }
 #modal{
