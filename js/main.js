@@ -49,8 +49,8 @@ $( document ).ready(function() {
   });
   });
 
-  $('.menu__btn').on('click', function(){
-	$('.menu__list').slideToggle();
+  $('.checkbox2').on('click', function(){
+	$('.menu__nav').slideToggle();
   });
   
 
@@ -75,5 +75,15 @@ $('.menu__language').click(function(){
 		  $('.menu__language li').removeClass('active');
 		  $(this).toggleClass('active');
 	})
+
+
+	$('.menu__language-inside li').click(function(){
+		var setLang = $('.menu__language').data('location'),
+			dataLangSelect = $(this).data('lang')
+			  $('.menu__language-inside').data('location', dataLangSelect);
+			  $('.menu__language-inside li').removeClass('active');
+			  $(this).toggleClass('active');
+		})
+
 
 });

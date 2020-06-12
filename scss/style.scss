@@ -89,14 +89,8 @@ body{
      width: 100%;
      padding: 0 40px;
      z-index: 101;
+    //  margin-top: 15px;
 }
-// .menu__language{
-//     display: inline-block;
-//     a{
-//       color: #fff;  
-//     }
-    
-// }
 .headhesive{
     background: transparent;
     position: fixed;
@@ -160,6 +154,9 @@ body{
         display: none;
     }
 }
+.logo, .menu, .menu__language{
+    margin-top: 15px;
+}
 .logo__link{
         display: flex;
         align-items: center;
@@ -197,6 +194,9 @@ body{
     padding-left: 50px;
 }
 
+}
+.checkbox2, .menu__language-inside{
+    display: none;
 }
 
 .menu__language{ 
@@ -318,7 +318,7 @@ body{
     position: relative;
     // height: 100%;
     width: 100%;
-    padding-top:45%;
+    padding-top: 50%;
     margin-bottom: 150px;
     min-height: 200px;
     background: #000;
