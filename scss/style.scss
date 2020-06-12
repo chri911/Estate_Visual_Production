@@ -313,7 +313,7 @@ body{
     }
   }
 .fullscreen{
-    overflow: hidden;
+    overflow: overlay;
     // z-index: -100;
     position: relative;
     // height: 100%;
@@ -549,7 +549,8 @@ button{
 }
 .footer{
     
-    background-image: url(../images/footer.jpg);
+    background-image: url(../images/bcnew10.png);
+    background-color: #000;
     background-size: content;
     display: flex;
         justify-content: space-between;
