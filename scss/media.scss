@@ -137,7 +137,7 @@
     .menu__language-inside{
         display: flex;
         justify-content: center;
-        color: #fff;
+        
         text-transform: uppercase;
         margin: 20px 0;
         & li + li {
@@ -146,6 +146,9 @@
         & li.active{
             color: rgb(163, 159, 159);
             pointer-events: none;
+          }
+          a{
+            color: #fff;
           }
     }
 

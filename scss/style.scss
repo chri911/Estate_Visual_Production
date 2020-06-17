@@ -203,13 +203,10 @@ body{
     display: inline-flex;
     flex-direction: column;
     transition: all .1s;
-    font-size: 10px;
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    color: #fff;
     margin: 20px;
-    text-transform: uppercase;
     height: 45px;
     width: 45px;
     margin-right: -15px;
@@ -224,6 +221,11 @@ body{
        &:hover{
         cursor: pointer;
     }
+     a{
+        font-size: 10px;
+        color: #fff;
+        text-transform: uppercase;
+     }
   }
   &::after{
     content: "";
