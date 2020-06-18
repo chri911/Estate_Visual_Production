@@ -1,6 +1,8 @@
 <?php
 $availableLocales = [
+    'en',
     'ru',
+    'ua'
 ];
 
 $urlParams = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
